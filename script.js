@@ -20,6 +20,12 @@ async function getKanye() {
     for(let i = 0; i < cardArray.length; i++){
         cardArray[i].innerText = quoteArray[i]
     }
+
+
+
+    for(let i = 0; i < cardArray.length; i++){
+        cardArray[i].innerText = quoteArray[i]
+    }
 }
 getKanye();
 
