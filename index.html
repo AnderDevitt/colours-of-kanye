@@ -1,44 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Project stylesheet-->
-        <link rel="stylesheet" href="./style.css">
+        <head>
+                <meta charset="UTF-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <!--Icons-->
+                <script src="https://kit.fontawesome.com/c0fb676b03.js" crossorigin="anonymous"></script>
 
-        <title>Colours Of Kanye</title>
-</head>
-<body>
-        <main>
-                <!-- Top Half div encompassing the purpose of site and colour palette" -->
-                <div class="top-half-container">
-                        <!-- Div containing image of kanye and description of the website -->
-                        <div class="image-site-description-container">
-                                <img class="hero-image" src="./images/awsome_ye.png" alt="An amazing photo of blonde Kanye">
-                                <div class="site-description-text">
-                                        <h1>This is the site name</h1>
-                                        <h3>This is the text explaining how good this site is and what it does</h3>
-                                </div>
-                        </div>
-                        <!-- This is the div containing the three colour boxes -->
-                        <div class="colour-box-container">
-                                <!-- These next three divs are to be the boxes containing randomly generated colours -->
-                                <div id="colour-box" class="colour-box-1">
-                                        <!-- Colour 1 -->
-                                </div>
-                                <div id="colour-box" class="colour-box-2">
-                                        <!-- Colour 2 -->
-                                </div>
-                                <div id="colour-box" class="colour-box-3">
-                                        <!-- Colour 3 -->
-                                </div>
-                        </div>
-                        <!-- This is the div containing the big old generate a new colour scheme and kanye quote -->
-                        <div class="big-button-container">
-                                <button class="big-button">Click Me To Get A New Colour Of Kanye</button>
-                        </div>
+                <!-- Project stylesheet-->
+                <link rel="stylesheet" href="/style.css">
+
+                <title>Colours of Kanye</title>
+                <!--Top of page navigation: -->
+                <div class="topnav" id="myTopnav">
+                        <a href="#home" class="active">Home</a>
+                        <a href="src/about.html">Our Team</a>
+                        
                 </div>
-        </main>
-</body>
+        </head>
+        <body>
+          <main>
+                  <!-- Top Half div encompassing the purpose of site and colour palette" -->
+                  <div class="top-half-container">
+                          <!-- Div containing image of kanye and description of the website -->
+                          <div class="image-site-description-container">
+                                  <img class="hero-image" src="./images/awsome_ye.png" alt="An amazing photo of blonde Kanye">
+                                  <div class="site-description-text">
+                                          <h1>This is the site name</h1>
+                                          <h3>This is the text explaining how good this site is and what it does</h3>
+                                  </div>
+                          </div>
+                          <!-- This is the div containing the three colour boxes -->
+                          <div class="colour-box-container">
+                                  <!-- These next three divs are to be the boxes containing randomly generated colours -->
+                                  <div id="colour-box" class="colour-box-1">
+                                          <!-- Colour 1 -->
+                                  </div>
+                                  <div id="colour-box" class="colour-box-2">
+                                          <!-- Colour 2 -->
+                                  </div>
+                                  <div id="colour-box" class="colour-box-3">
+                                          <!-- Colour 3 -->
+                                  </div>
+                          </div>
+                          <!-- This is the div containing the big old generate a new colour scheme and kanye quote -->
+                          <div class="big-button-container">
+                                  <button class="big-button">Click Me To Get A New Colour Of Kanye</button>
+                          </div>
+                  </div>
+          </main>
+
+                <!--the footer contains a secondary navigation, top button for large content pages, copyright info-->
+                <footer>
+                        <!--Creates a button to return users t the top of the page without scrolling-->
+                        <div class="up-button">
+                        <a href="#top"><i class="fas fa-arrow-circle-up fa-4x"></i></a>      
+                        </div>
+                        <!--Creates icon buttons for a user to navigate to pages from the bottom of the screen-->
+                        <div class="page-buttons">
+                        <a class="bottom-nav"><i class="fas fa-home fa-2x"></i></a>
+                        <a class="social-icon" href="https://github.com/AnderDevitt" target="_blank"><i class="fab fa-github-square fa-3x"></i><br><br>Andrew Devitt</a>
+                        <a class="social-icon" href="https://github.com/iamcrjones" target="_blank"><i class="fab fa-github-square fa-3x"></i><br><br>Cameron Jones</a>
+                        <a class="social-icon" href="https://github.com/jwsandeman" target="_blank"><i class="fab fa-github-square fa-3x"></i><br><br>Jason Sandeman</a>
+                        <a class="social-icon" href="https://github.com/matildamort" target="_blank"><i class="fab fa-github-square fa-3x"></i><br><br>Matilda Morton</a>
+                        <a class="social-icon" href="https://github.com/simon-tanna" target="_blank"><i class="fab fa-github-square fa-3x"></i><br><br>Simon Tanna</a>
+                        </div>
+                        <!--Copyright information-->
+                        <div>
+                        <p>&#169; PokeMasters,  2022. All rights reserved.</p>
+                        </div> 
+                </footer>
+        </body>
+                <script src="script.js" type="module"></script>
 </html>
