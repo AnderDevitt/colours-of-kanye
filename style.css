@@ -6,8 +6,8 @@ body {
 
 }
 /* Top half div styling */
-.top-half-container{
-}
+/* .top-half-container{
+} */
 
 /* Image and site description styling */
 
@@ -29,11 +29,10 @@ body {
 
 /* Styling elements for the colour boxes in the top div */
 
-/* #colour-box{
+#colour-box{
     height: 100px;
     width: 100px;
-    border: 2px solid red;
-} */
+}
 
 .colour-box-1{
     height: 100px;
@@ -57,4 +56,21 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+}
+
+.big-button-container{
+    display: flex;
+    align-items: flex-end;
+}
+
+.big-button{
+    align-self: center;
+}
+
+.top-half-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
