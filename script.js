@@ -42,7 +42,26 @@ async function getColor() {
     let schemeArray = []
     schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
     console.log(schemeArray)
+    changeColor(schemeArray)
+
 }
 
 getColor()
+
+
+const btn = document.getElementById("big-button");
+
+btn.addEventListener('click', (event) => {
+    getColor();
+    getKanye();
+})
+
+function changeColor(schemeArray) {
+    let colorOne = document.getElementsByClassName("colour-box-1");
+    let colorTwo = document.getElementsByClassName("colour-box-2");
+    let colorThree = document.getElementsByClassName("colour-box-3");
+    colorOne.item(0).style.backgroundColor = schemeArray[0];
+    colorTwo.item(0).style.backgroundColor = schemeArray[1];
+    colorThree.item(0).style.backgroundColor = schemeArray[2];
+}
 
