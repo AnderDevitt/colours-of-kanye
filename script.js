@@ -40,7 +40,7 @@ async function getColor() {
     console.log(data.color)
     console.log(schemeData.colors)
     let schemeArray = []
-    schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value )
+    schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
     console.log(schemeArray)
 }
 
