@@ -9,6 +9,8 @@ body {
 .top-half-container{
 }
 
+/* Image and site description styling */
+
 .image-site-description-container{
     display: inline-flex;
     flex-wrap: wrap;
@@ -25,12 +27,34 @@ body {
     text-align: center;
 }
 
-#colour-box{
+/* Styling elements for the colour boxes in the top div */
+
+/* #colour-box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+} */
+
+.colour-box-1{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+}
+
+.colour-box-2{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+}
+
+.colour-box-3{
     height: 100px;
     width: 100px;
     border: 2px solid red;
 }
 
 .colour-box-container{
-    display: inline-flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
