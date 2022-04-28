@@ -15,35 +15,156 @@ body {
   display: inline-flex;
 }
 
+/* Top half div styling */
+/* .top-half-container{
+} */
+
+/* Image and site description styling */
+
+.image-site-description-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  max-width: 50%;
+  display: flex;
+}
+
+.site-description-text {
+  text-align: center;
+}
+
+/* Styling elements for the colour boxes in the top div */
+
+.colour-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.colour-box-1 {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  border: 2px solid red;
+  display: flex;
+}
+
+.colour-box-2 {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  border: 2px solid red;
+  display: flex;
+}
+
+.colour-box-3 {
+  width: 100%;
+  height: 0;
+  padding-top: 100%;
+  border: 2px solid red;
+  display: flex;
+}
+
+.colour-box-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.big-button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+}
+
+.big-button {
+  align-self: center;
+  font-size: 20px;
+  width: 100%;
+  height: 100px;
+}
+
+.top-half-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button-description {
+  padding-top: 1rem;
+  text-align: center;
+}
+
 /*------ start of quotes section css ------*/
 /* entire quotes section */
 .quotes {
   display: flex;
   flex-direction: column;
-  border: 2px solid green;
 }
 
 /* quotes navbar */
 .quotesNavbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  border: 2px solid blue;
   padding: 24px;
-  background-color: aquamarine;
+  background-color: lightgray;
 }
 
-/* quotes navbar logo */
-.quotesLogo {
-  display: flex;
+.quotesNavbar img {
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+
+button {
+  padding: 14px 24px;
+  background-color: grey;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+}
+
+button:hover {
+  border: 2px solid grey;
+  background-color: white;
+  color: grey;
 }
 
 /* quotes hero section */
 .quotesHero {
   display: flex;
   justify-content: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   padding: 24px;
+  background-color: grey;
+}
+
+.heroContainer {
+  display: flex;
+  justify-content: center;
+  padding: 48px 0;
   width: 75%;
   margin: auto;
 }
@@ -51,8 +172,13 @@ body {
 /* quotes hero image */
 .quotesHeroImage {
   display: flex;
-  padding: 24px;
   width: 50%;
+  margin: auto;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
 }
 
 /* quotes hero text section */
@@ -61,40 +187,32 @@ body {
   flex-direction: column;
   padding: 24px;
   width: 50%;
-}
-/* Top half div styling */
-/* .top-half-container{
-} */
-
-/* Image and site description styling */
-
-.image-site-description-container{
-    display: inline-flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
+  margin: auto;
 }
 
-.hero-image{
-    max-width: 50%;
-    display: flex;
+.quotesHeroText h1 {
+  font-size: 48px;
+  padding-left: 24px;
 }
 
-.site-description-text{
-    text-align: center;
+.quotesHeroText p {
+  font-size: 24px;
+  padding-left: 24px;
+  font-style: italic;
 }
-
-/* Styling elements for the colour boxes in the top div */
-
 
 /* quote cards section */
 .quotesPanel {
   display: flex;
-  border: 2px solid yellow;
+  justify-content: center;
   padding: 24px;
+  background-color: lightgray;
+}
+
+.panelContainer {
+  display: flex;
   width: 75%;
-  margin: auto;
-  background-color: pink;
+  padding: 48px 0;
 }
 
 /* individual quote card */
@@ -102,35 +220,16 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid pink;
-  padding: 24px;
+  text-align: center;
+  padding: 16px;
   width: 20%;
-  margin: auto;
-}
-
-#colour-box{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 0.7rem;
-    padding-right: 0.7rem;
-}
-
-.colour-box-1{
-    width: 100%;
-    height: 0;
-    padding-top: 100%;
-    border: 2px solid red;
-    display: flex;
-}
-
-.colour-box-2{
-    width: 100%;
-    height: 0;
-    padding-top: 100%;
-    border: 2px solid red;
-    display: flex;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px 0 #83898a;
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
 }
 
 .colour-box-3{
