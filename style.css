@@ -1,0 +1,10 @@
+#colour-box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+}
+
+.colour-box-container{
+    display: inline-flex;
+}
+
