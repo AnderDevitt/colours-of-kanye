@@ -34,7 +34,15 @@ getKanye();
 async function getColor() {
     let response = await fetch('http://api.creativehandles.com/getRandomColor')
     let data = await response.json()
-    console.log(data)
+    let dataCol = data.color.substring(1)
+    let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${dataCol}&format=jsons&mode=triad&count=3`)
+    let schemeData = await responseScheme.json()
+    console.log(data.color)
+    console.log(schemeData.colors)
+    let schemeArray = []
+    schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
+    console.log(schemeArray)
 }
 
 getColor()
+
