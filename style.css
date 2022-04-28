@@ -1,0 +1,16 @@
+/*-- Style the body --*/
+
+body {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+
+}
+
+#colour-box{
+    height: 100px;
+    width: 100px;
+    border: 2px solid red;
+}
+
+.colour-box-container{
+    display: inline-flex;
