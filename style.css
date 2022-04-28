@@ -5,6 +5,25 @@ body {
         margin: 0;
 
 }
+/* Top half div styling */
+.top-half-container{
+}
+
+.image-site-description-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image{
+    max-width: 50%;
+    display: flex;
+}
+
+.site-description-text{
+    text-align: center;
+}
 
 #colour-box{
     height: 100px;
