@@ -39,7 +39,7 @@ body {
 
 /* Styling elements for the colour boxes in the top div */
 
-#colour-box {
+.colour-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
