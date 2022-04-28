@@ -1,17 +1,85 @@
 /*-- Style the body --*/
 
 body {
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 0;
-
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
 
-#colour-box{
-    height: 100px;
-    width: 100px;
-    border: 2px solid red;
+#colour-box {
+  height: 100px;
+  width: 100px;
+  border: 2px solid red;
 }
 
-.colour-box-container{
-    display: inline-flex;
+.colour-box-container {
+  display: inline-flex;
+}
+
+/*------ start of quotes section css ------*/
+/* entire quotes section */
+.quotes {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid green;
+}
+
+/* quotes navbar */
+.quotesNavbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid blue;
+  padding: 24px;
+  background-color: aquamarine;
+}
+
+/* quotes navbar logo */
+.quotesLogo {
+  display: flex;
+}
+
+/* quotes hero section */
+.quotesHero {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  padding: 24px;
+  width: 75%;
+  margin: auto;
+}
+
+/* quotes hero image */
+.quotesHeroImage {
+  display: flex;
+  padding: 24px;
+  width: 50%;
+}
+
+/* quotes hero text section */
+.quotesHeroText {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  width: 50%;
+}
+
+/* quote cards section */
+.quotesPanel {
+  display: flex;
+  border: 2px solid yellow;
+  padding: 24px;
+  width: 75%;
+  margin: auto;
+  background-color: pink;
+}
+
+/* individual quote card */
+.quotesCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid pink;
+  padding: 24px;
+  width: 20%;
+  margin: auto;
 }
