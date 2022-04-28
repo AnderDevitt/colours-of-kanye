@@ -160,7 +160,7 @@ body {
     padding-bottom: 2rem;
 }
 
-.big-button{
+#big-button{
     align-self: center;
     font-size : 20px; 
     width: 100%; 
