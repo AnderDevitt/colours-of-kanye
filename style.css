@@ -62,6 +62,30 @@ body {
   padding: 24px;
   width: 50%;
 }
+/* Top half div styling */
+/* .top-half-container{
+} */
+
+/* Image and site description styling */
+
+.image-site-description-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image{
+    max-width: 50%;
+    display: flex;
+}
+
+.site-description-text{
+    text-align: center;
+}
+
+/* Styling elements for the colour boxes in the top div */
+
 
 /* quote cards section */
 .quotesPanel {
@@ -83,3 +107,74 @@ body {
   width: 20%;
   margin: auto;
 }
+
+#colour-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+}
+
+.colour-box-1{
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    border: 2px solid red;
+    display: flex;
+}
+
+.colour-box-2{
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    border: 2px solid red;
+    display: flex;
+}
+
+.colour-box-3{
+    width: 100%;
+    height: 0;
+    padding-top: 100%;
+    border: 2px solid red;
+    display: flex;
+}
+
+.colour-box-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+.big-button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 2rem;
+}
+
+.big-button{
+    align-self: center;
+    font-size : 20px; 
+    width: 100%; 
+    height: 100px;
+}
+
+.top-half-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-description{
+    padding-top: 1rem;
+    text-align: center;
+}
+
