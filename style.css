@@ -156,7 +156,7 @@ button {
   padding: 14px 24px;
   background-color: grey;
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   border: none;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -168,8 +168,12 @@ button {
 
 button:hover {
   border: 2px solid grey;
-  background-color: white;
-  color: grey;
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
 /* quotes hero section */
@@ -513,3 +517,6 @@ section {
   }
 }
 
+.social-icon{
+  text-align: justify;
+}
