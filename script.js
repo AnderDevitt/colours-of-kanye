@@ -92,7 +92,9 @@ function setTheme(schemeArray) {
 }
 
 function randomImage() {
-    let numbers = new Array(1,2,3,4,5,6,7,8)
+    let min = 1
+    let max = 14
+    let numbers = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13)
     console.log(numbers)
     let images = new Array(
         document.getElementsByClassName("quotesHeroImage").item(0),
@@ -102,7 +104,7 @@ function randomImage() {
         document.getElementsByClassName("quotesCardImg4").item(0)
     )
     for(let image of images) {
-        image.src = `./images/${Math.floor(Math.random(numbers)*numbers.length)}.jpg`
+        image.src = `./images/${Math.floor(Math.random()*(max - min)+min)}.jpg`
         console.log(image.src)
     }
 }
