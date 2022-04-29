@@ -548,6 +548,10 @@ section {
   font-size: 18px;
 }
 
+.button-contact-container {
+  padding: 0.5rem;
+}
+
 .team-social-icon {
   text-decoration: none;
   font-size: 22px;
