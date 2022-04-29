@@ -364,8 +364,14 @@ section {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font-size: 16px
+  font-size: 16px;
   padding: 45px 50px;
+}
+
+.footer-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footer-distributed .footer-left p {
