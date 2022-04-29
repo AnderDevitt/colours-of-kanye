@@ -1,30 +1,54 @@
 // API FETCH REQUESTS HERE
 
 // Kanye Quotes
-const card1 = document.getElementsByClassName("quotesCardQuote1")
-const card2 = document.getElementsByClassName("quotesCardQuote2")
-const card3 = document.getElementsByClassName("quotesCardQuote3")
-const card4 = document.getElementsByClassName("quotesCardQuote4")
-const hero = document.getElementsByClassName("quotesHeroQuote")
+const card1 = document.getElementsByClassName("quotesCardQuote1");
+const card2 = document.getElementsByClassName("quotesCardQuote2");
+const card3 = document.getElementsByClassName("quotesCardQuote3");
+const card4 = document.getElementsByClassName("quotesCardQuote4");
+const hero = document.getElementsByClassName("quotesHeroQuote");
 async function getKanye() {
-    let cardArray = []
-    let quoteArray = []
-    cardArray.push(card1.item(0), card2.item(0), card3.item(0), card4.item(0), hero.item(0))
-    for(let i = 0; i < cardArray.length; i++) {
-        let response = await fetch("https://api.kanye.rest")
-        let data = await response.json()
-        quoteArray.push(data.quote)
-    }
-    for(let i = 0; i < cardArray.length; i++){
-        cardArray[i].innerText = quoteArray[i]
-    }
-
-
-
-    for(let i = 0; i < cardArray.length; i++){
-        cardArray[i].innerText = quoteArray[i]
-    }
+  let cardArray = [];
+  let quoteArray = [];
+  cardArray.push(
+    card1.item(0),
+    card2.item(0),
+    card3.item(0),
+    card4.item(0),
+    hero.item(0)
+  );
+  for (let i = 0; i < cardArray.length; i++) {
+    let response = await fetch("https://api.kanye.rest");
+    let data = await response.json();
+    quoteArray.push(finestMoment(data.quote, naughtyYeezus));
+  }
+  for (let i = 0; i < cardArray.length; i++) {
+    cardArray[i].innerText = quoteArray[i];
+  }
+  for (let i = 0; i < cardArray.length; i++) {
+    cardArray[i].innerText = quoteArray[i];
+  }
 }
+
+// kayne's finest moments functions
+// takes the sentence and the callback function
+let finestMoment = (sentence, modifier) => {
+  return sentence.split(" ").map(modifier).join(" ");
+};
+// converts naughty word to safe word
+let naughtyYeezus = (word) => {
+  if (word.toLowerCase() === "fuck") {
+    return "chicken-lickin";
+  } else if (word.toLowerCase() === "shit") {
+    return "donkey";
+  } else if (word.toLowerCase() === "bitch") {
+    return "pizza";
+  } else if (word.toLowerCase() === "fucking") {
+    return "donkey";
+  } else {
+    return word;
+  }
+};
+
 getKanye();
 
 // Random color generator api
@@ -41,23 +65,22 @@ async function getColor() {
     setTheme(schemeArray)
 }
 
-getColor()
-
+getColor();
 
 const btn = document.getElementById("big-button");
 
-btn.addEventListener('click', (event) => {
-    getColor();
-    getKanye();
-})
+btn.addEventListener("click", (event) => {
+  getColor();
+  getKanye();
+});
 
 function changeColor(schemeArray) {
-    let colorOne = document.getElementsByClassName("colour-box-1");
-    let colorTwo = document.getElementsByClassName("colour-box-2");
-    let colorThree = document.getElementsByClassName("colour-box-3");
-    colorOne.item(0).style.backgroundColor = schemeArray[0];
-    colorTwo.item(0).style.backgroundColor = schemeArray[1];
-    colorThree.item(0).style.backgroundColor = schemeArray[2];
+  let colorOne = document.getElementsByClassName("colour-box-1");
+  let colorTwo = document.getElementsByClassName("colour-box-2");
+  let colorThree = document.getElementsByClassName("colour-box-3");
+  colorOne.item(0).style.backgroundColor = schemeArray[0];
+  colorTwo.item(0).style.backgroundColor = schemeArray[1];
+  colorThree.item(0).style.backgroundColor = schemeArray[2];
 }
 
 function setTheme(schemeArray) {
