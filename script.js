@@ -36,13 +36,13 @@ let finestMoment = (sentence, modifier) => {
 };
 // converts naughty word to safe word
 let naughtyYeezus = (word) => {
-  if (word.toLowerCase() === "fuck") {
+  if (word.toLowerCase() === "fuck" || word.toLowerCase() === "fuck." || word.toLowerCase() === "f#%k") {
     return "chicken-lickin";
-  } else if (word.toLowerCase() === "shit") {
-    return "donkey";
-  } else if (word.toLowerCase() === "bitch") {
+  } else if (word.toLowerCase() === "shit" || word.toLowerCase() === "shit.") {
+    return "cats";
+  } else if (word.toLowerCase() === "bitch" || word.toLowerCase() === "bitch.") {
     return "pizza";
-  } else if (word.toLowerCase() === "fucking") {
+  } else if (word.toLowerCase() === "fucking" || word.toLowerCase() === "fucking.") {
     return "donkey";
   } else {
     return word;
