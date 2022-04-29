@@ -1,4 +1,9 @@
 
+:root {
+  --colour1: #faf0e6;
+  --colour2: #6495ed;
+  --colour3: #ff0000;
+}
 
 /*-- Style the body --*/
 body {
@@ -162,7 +167,9 @@ button:hover {
   justify-content: center;
   /* border: 2px solid red; */
   padding: 24px;
-  background-color: grey;
+  background-color: var(--colour1);
+  border-color: var(--colour2);
+  text-decoration-color: var(--colour3);
 }
 
 .heroContainer {
