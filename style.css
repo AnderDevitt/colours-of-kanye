@@ -1,8 +1,8 @@
 
 :root {
-  --colour1: #faf0e6;
-  --colour2: #6495ed;
-  --colour3: #ff0000;
+  --colour1: ;
+  --colour2: ;
+  --colour3: ;
 }
 
 /*-- Style the body --*/
@@ -17,7 +17,7 @@ body {
 #colour-box {
   height: 100px;
   width: 100px;
-  border: 2px solid red;
+  border: 2px solid gray;
 }
 
 .colour-box-container {
@@ -34,16 +34,22 @@ body {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding-bottom: 3rem;
 }
 
 .hero-image {
-  max-width: 50%;
+  max-width: 70%;
   display: flex;
+  padding: 1rem;
 }
 
 .site-description-text {
   text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 /* Styling elements for the colour boxes in the top div */
@@ -55,40 +61,42 @@ body {
   align-items: center;
   padding-left: 0.7rem;
   padding-right: 0.7rem;
+  width: 20%;
 }
 
 .colour-box-1 {
   width: 100%;
   height: 0;
   padding-top: 100%;
-  border: 2px solid red;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .colour-box-2 {
   width: 100%;
   height: 0;
   padding-top: 100%;
-  border: 2px solid red;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .colour-box-3 {
   width: 100%;
   height: 0;
   padding-top: 100%;
-  border: 2px solid red;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .colour-box-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-bottom: 1rem;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
+  border-top: gray dotted 2px;
 }
 
 .big-button-container {
@@ -117,6 +125,8 @@ body {
 .button-description {
   padding-top: 1rem;
   text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /*------ start of quotes section css ------*/
@@ -243,7 +253,7 @@ button {
   padding: 14px 24px;
   background-color: var(--colour3);
   color: white;
-  font-size: 20px;
+  font-size: 30px;
   border: none;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -254,9 +264,13 @@ button {
 }
 
 button:hover {
-  border: 2px solid var(--colour3);
-  background-color: white;
-  color: var(--colour3);
+  border: 2px solid grey;
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
 }
 
 /* quotes hero section */
@@ -439,12 +453,16 @@ a {
 	.header {
 		flex-direction: column;
 		align-items: center;
-    	.header{
 		width: 80%;
 		margin: 0 auto;
 		max-width: 1150px;
 	}
-	}
+  .hero-image {
+    max-width: 50%;
+    display: flex;
+    padding: 1rem;
+  }
+
 }
 
 @media (min-width: 1025px) {
@@ -453,6 +471,18 @@ a {
 		justify-content: space-between;
 	}
 
+  .hero-image {
+    max-width: 35%;
+    display: flex;
+    padding: 1rem;
+  }
+
+  .site-description-text {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 50%;
+  }
 }
 
 /* Footer code */
@@ -595,4 +625,8 @@ section {
   50% {
       background-position: 100% 0;
   }
+}
+
+.social-icon{
+  text-align: justify;
 }
