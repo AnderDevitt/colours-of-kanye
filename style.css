@@ -289,7 +289,7 @@ a {
 
 .main-nav a {
 	color: #34495e;
-	font-size: .99em;
+	font-size: 2em;
 }
 
 .main-nav a:hover {
@@ -449,6 +449,14 @@ section {
   text-align: center;
   text-decoration: underline;
   font-size: 32px;
+  font-family: monospace;
+  letter-spacing: 5px;
+  margin-left: 1rem;
+}
+
+.rainbow-small {
+  text-align: center;
+  font-size: 24px;
   font-family: monospace;
   letter-spacing: 5px;
   margin-left: 1rem;
