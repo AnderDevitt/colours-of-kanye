@@ -16,19 +16,14 @@ async function getKanye() {
     card4.item(0),
     hero.item(0)
   );
-  console.log(cardArray);
   for (let i = 0; i < cardArray.length; i++) {
     let response = await fetch("https://api.kanye.rest");
     let data = await response.json();
-    console.log(data.quote);
-    // console.log(finestMoment(data.quote, naughtyYeezus));
-    // quoteArray.push(data.quote);
     quoteArray.push(finestMoment(data.quote, naughtyYeezus));
   }
   for (let i = 0; i < cardArray.length; i++) {
     cardArray[i].innerText = quoteArray[i];
   }
-
   for (let i = 0; i < cardArray.length; i++) {
     cardArray[i].innerText = quoteArray[i];
   }
@@ -59,23 +54,15 @@ getKanye();
 // Random color generator api
 
 async function getColor() {
-  let response = await fetch("http://api.creativehandles.com/getRandomColor");
-  let data = await response.json();
-  let dataCol = data.color.substring(1);
-  let responseScheme = await fetch(
-    `https://www.thecolorapi.com/scheme?hex=${dataCol}&format=jsons&mode=triad&count=3`
-  );
-  let schemeData = await responseScheme.json();
-  console.log(data.color);
-  console.log(schemeData.colors);
-  let schemeArray = [];
-  schemeArray.push(
-    schemeData.colors[0].hex.value,
-    schemeData.colors[1].hex.value,
-    schemeData.colors[2].hex.value
-  );
-  console.log(schemeArray);
-  changeColor(schemeArray);
+    let response = await fetch('http://api.creativehandles.com/getRandomColor')
+    let data = await response.json()
+    let dataCol = data.color.substring(1)
+    let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${dataCol}&format=jsons&mode=triad&count=3`)
+    let schemeData = await responseScheme.json()
+    let schemeArray = []
+    schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
+    changeColor(schemeArray)
+    setTheme(schemeArray)
 }
 
 getColor();
@@ -96,24 +83,10 @@ function changeColor(schemeArray) {
   colorThree.item(0).style.backgroundColor = schemeArray[2];
 }
 
-// // kayne's finest moments functions
-// // takes the sentence and the callback function
-// finestMoment = (sentence, modifier) => {
-//   return sentence.split(" ").map(modifier).join(" ");
-// };
+function setTheme(schemeArray) {
+    let root = document.documentElement;
+    root.style.setProperty("--colour1", schemeArray[0])
+    root.style.setProperty("--colour2", schemeArray[1])
+    root.style.setProperty("--colour3", schemeArray[2])
+}
 
-// naughtyYeezus = (word) => {
-//   if (word.toLowerCase() === "fuck") {
-//     return "chicken-lickin";
-//   } else if (word.toLowerCase() === "shit") {
-//     return "donkey";
-//   } else if (word.toLowerCase() === "bitch") {
-//     return "pizza";
-//   } else if (word.toLowerCase() === "fucking") {
-//     return "donkey";
-//   } else {
-//     return word;
-//   }
-// };
-
-// console.log(finestMoment(data, naughtyYeezus));
