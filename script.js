@@ -49,8 +49,6 @@ let naughtyYeezus = (word) => {
   }
 };
 
-getKanye();
-
 // Random color generator api
 
 async function getColor() {
@@ -64,8 +62,6 @@ async function getColor() {
     changeColor(schemeArray)
     setTheme(schemeArray)
 }
-
-getColor();
 
 const btn = document.getElementById("big-button");
 
@@ -93,9 +89,8 @@ function setTheme(schemeArray) {
 
 function randomImage() {
     let min = 1
-    let max = 14
-    let numbers = new Array(1,2,3,4,5,6,7,8,9,10,11,12,13)
-    console.log(numbers)
+    //let max = 12
+    let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     let images = new Array(
         document.getElementsByClassName("quotesHeroImage").item(0),
         document.getElementsByClassName("quotesCardImg1").item(0),
@@ -103,9 +98,20 @@ function randomImage() {
         document.getElementsByClassName("quotesCardImg3").item(0),
         document.getElementsByClassName("quotesCardImg4").item(0)
     )
+    let existing = []
+
+    while(existing.length < 5) {
+        let randomNum = Math.floor(Math.random()*(numbers.length - min)+min)
+        if(!existing.includes(randomNum)){
+            existing.push(randomNum)
+        }
+    }
     for(let image of images) {
-        image.src = `./images/${Math.floor(Math.random()*(max - min)+min)}.jpg`
-        console.log(image.src)
+        let index = images.indexOf(image)
+        image.src = `./images/${existing[index]}.jpg`
     }
 }
+
+getKanye();
+getColor();
 randomImage();
