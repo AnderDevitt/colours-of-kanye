@@ -430,7 +430,7 @@ a {
 
 .main-nav {
 	margin-top: 5px;
-
+  
 }
 .logo a,
 .main-nav a {
@@ -480,9 +480,9 @@ a {
 	.header {
 		flex-direction: column;
 		align-items: center;
-		width: 80%;
+		max-width: 90%;
 		margin: 0 auto;
-		max-width: 1150px;
+		/* max-width: 1150px; */
 	}
   .hero-image {
     max-width: 50%;
@@ -496,6 +496,7 @@ a {
 	.header {
 		flex-direction: row;
 		justify-content: space-between;
+    width: 100%
 	}
 
   .hero-image {
