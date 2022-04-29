@@ -430,7 +430,7 @@ a {
 
 .main-nav {
 	margin-top: 5px;
-
+  
 }
 .logo a,
 .main-nav a {
@@ -480,9 +480,9 @@ a {
 	.header {
 		flex-direction: column;
 		align-items: center;
-		width: 80%;
+		max-width: 90%;
 		margin: 0 auto;
-		max-width: 1150px;
+		/* max-width: 1150px; */
 	}
   .hero-image {
     max-width: 50%;
@@ -496,6 +496,7 @@ a {
 	.header {
 		flex-direction: row;
 		justify-content: space-between;
+    width: 100%
 	}
 
   .hero-image {
@@ -656,4 +657,66 @@ section {
 
 .social-icon{
   text-align: justify;
+}
+
+/* our team page style */
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+.contact-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.button-contact-container {
+  padding: 0.5rem;
+}
+
+.team-social-icon {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.team-site-description-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 3rem;
+  margin-right: 3rem;
+  margin-left: 3rem;
+}
+
+.team-class-page {
+  margin: 3rem;
+}
+
+.colour-box-team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: .5rem;
+  padding-bottom: 1.5rem;
 }
