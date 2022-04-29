@@ -342,11 +342,9 @@ a {
 	.header {
 		flex-direction: column;
 		align-items: center;
-    	.header{
 		width: 80%;
 		margin: 0 auto;
 		max-width: 1150px;
-	}
 	}
   .hero-image {
     max-width: 50%;
