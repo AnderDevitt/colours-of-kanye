@@ -34,12 +34,13 @@ body {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .hero-image {
-  max-width: 50%;
+  max-width: 70%;
   display: flex;
+  padding: 1rem;
 }
 
 .site-description-text {
@@ -334,6 +335,11 @@ a {
 		max-width: 1150px;
 	}
 	}
+  .hero-image {
+    max-width: 50%;
+    display: flex;
+    padding: 1rem;
+  }
 
 }
 
@@ -343,6 +349,11 @@ a {
 		justify-content: space-between;
 	}
 
+  .hero-image {
+    max-width: 35%;
+    display: flex;
+    padding: 1rem;
+  }
 }
 
 /* Footer code */
