@@ -63,14 +63,6 @@ async function getColor() {
     setTheme(schemeArray)
 }
 
-const btn = document.getElementById("big-button");
-
-btn.addEventListener("click", (event) => {
-  getColor();
-  getKanye();
-  randomImage();
-});
-
 function changeColor(schemeArray) {
   let colorOne = document.getElementsByClassName("colour-box-1");
   let colorTwo = document.getElementsByClassName("colour-box-2");
@@ -112,6 +104,19 @@ function randomImage() {
     }
 }
 
+const btn = document.getElementById("big-button");
+
+btn.addEventListener("click", (event) => {
+  getColor();
+  getKanye();
+  randomImage();
+});
+
+const quotesButton = document.getElementsByClassName("quotesButton").item(0)
+
+quotesButton.addEventListener("click", (event) => {
+    getColor();
+  });
 getKanye();
 getColor();
 randomImage();
