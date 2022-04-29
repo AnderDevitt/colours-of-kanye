@@ -10,11 +10,9 @@ async function getKanye() {
     let cardArray = []
     let quoteArray = []
     cardArray.push(card1.item(0), card2.item(0), card3.item(0), card4.item(0), hero.item(0))
-    console.log(cardArray)
     for(let i = 0; i < cardArray.length; i++) {
         let response = await fetch("https://api.kanye.rest")
         let data = await response.json()
-        console.log(data.quote)
         quoteArray.push(data.quote)
     }
     for(let i = 0; i < cardArray.length; i++){
@@ -37,13 +35,10 @@ async function getColor() {
     let dataCol = data.color.substring(1)
     let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${dataCol}&format=jsons&mode=triad&count=3`)
     let schemeData = await responseScheme.json()
-    console.log(data.color)
-    console.log(schemeData.colors)
     let schemeArray = []
     schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
-    console.log(schemeArray)
     changeColor(schemeArray)
-
+    setTheme(schemeArray)
 }
 
 getColor()
@@ -63,5 +58,12 @@ function changeColor(schemeArray) {
     colorOne.item(0).style.backgroundColor = schemeArray[0];
     colorTwo.item(0).style.backgroundColor = schemeArray[1];
     colorThree.item(0).style.backgroundColor = schemeArray[2];
+}
+
+function setTheme(schemeArray) {
+    let root = document.documentElement;
+    root.style.setProperty("--colour1", schemeArray[0])
+    root.style.setProperty("--colour2", schemeArray[1])
+    root.style.setProperty("--colour3", schemeArray[2])
 }
 
