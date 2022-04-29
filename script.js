@@ -72,6 +72,7 @@ const btn = document.getElementById("big-button");
 btn.addEventListener("click", (event) => {
   getColor();
   getKanye();
+  randomImage();
 });
 
 function changeColor(schemeArray) {
@@ -90,3 +91,19 @@ function setTheme(schemeArray) {
     root.style.setProperty("--colour3", schemeArray[2])
 }
 
+function randomImage() {
+    let numbers = new Array(1,2,3,4,5,6,7,8)
+    console.log(numbers)
+    let images = new Array(
+        document.getElementsByClassName("quotesHeroImage").item(0),
+        document.getElementsByClassName("quotesCardImg1").item(0),
+        document.getElementsByClassName("quotesCardImg2").item(0),
+        document.getElementsByClassName("quotesCardImg3").item(0),
+        document.getElementsByClassName("quotesCardImg4").item(0)
+    )
+    for(let image of images) {
+        image.src = `./images/${Math.floor(Math.random(numbers)*numbers.length)}.jpg`
+        console.log(image.src)
+    }
+}
+randomImage();
