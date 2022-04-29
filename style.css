@@ -7,7 +7,7 @@
 
 /*-- Style the body --*/
 body {
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Ubuntu Mono', monospace;
 	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
@@ -147,13 +147,14 @@ button {
   padding: 14px 24px;
   background-color: grey;
   color: white;
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   border-radius: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
+  font-family: 'Ubuntu Mono', monospace;
 }
 
 button:hover {
@@ -363,7 +364,7 @@ section {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: normal 16px sans-serif;
+  font-size: 16px
   padding: 45px 50px;
 }
 
@@ -448,8 +449,8 @@ section {
 .rainbow {
   text-align: center;
   text-decoration: underline;
-  font-size: 32px;
-  font-family: monospace;
+  font-size: 38px;
+  font-family: 'Ubuntu Mono', monospace;
   letter-spacing: 5px;
   margin-left: 1rem;
 }
