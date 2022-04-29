@@ -17,7 +17,7 @@ body {
 #colour-box {
   height: 100px;
   width: 100px;
-  border: 2px solid red;
+  border: 2px solid gray;
 }
 
 .colour-box-container {
@@ -34,16 +34,22 @@ body {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  padding-bottom: 3rem;
 }
 
 .hero-image {
-  max-width: 50%;
+  max-width: 70%;
   display: flex;
+  padding: 1rem;
 }
 
 .site-description-text {
   text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 /* Styling elements for the colour boxes in the top div */
@@ -61,34 +67,35 @@ body {
   width: 100%;
   height: 0;
   padding-top: 100%;
-  border: 2px solid red;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .colour-box-2 {
   width: 100%;
   height: 0;
   padding-top: 100%;
-  border: 2px solid red;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .colour-box-3 {
   width: 100%;
   height: 0;
   padding-top: 100%;
-  border: 2px solid red;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .colour-box-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-bottom: 1rem;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
+  border-top: gray dotted 2px;
 }
 
 .big-button-container {
@@ -117,6 +124,8 @@ body {
 .button-description {
   padding-top: 1rem;
   text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /*------ start of quotes section css ------*/
@@ -334,6 +343,11 @@ a {
 		max-width: 1150px;
 	}
 	}
+  .hero-image {
+    max-width: 50%;
+    display: flex;
+    padding: 1rem;
+  }
 
 }
 
@@ -343,6 +357,18 @@ a {
 		justify-content: space-between;
 	}
 
+  .hero-image {
+    max-width: 35%;
+    display: flex;
+    padding: 1rem;
+  }
+
+  .site-description-text {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 50%;
+  }
 }
 
 /* Footer code */
@@ -486,3 +512,4 @@ section {
       background-position: 100% 0;
   }
 }
+
