@@ -130,6 +130,101 @@ body {
 }
 
 /*------ start of quotes section css ------*/
+
+/*------ webpage display window ------*/
+/* The browser window */
+.quotesContainer {
+  border: 3px solid #f1f1f1;
+  border-radius: 8px;
+  width: 75%;
+  margin: auto;
+  margin-bottom: 48px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+/* Container for columns and the top "toolbar" */
+.row {
+  padding: 10px;
+  background: #f1f1f1;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+}
+
+.left {
+  width: 15%;
+}
+
+.right {
+  width: 10%;
+}
+
+.middle {
+  width: 75%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Three dots */
+.dot {
+  margin-top: 4px;
+  height: 12px;
+  width: 12px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Style the input field */
+input[type=text] {
+  width: 100%;
+  border-radius: 3px;
+  border: none;
+  background-color: white;
+  margin-top: -8px;
+  height: 25px;
+  color: #666;
+  padding: 5px;
+}
+
+/* Three bars (hamburger menu) */
+.bar {
+  width: 17px;
+  height: 3px;
+  background-color: #aaa;
+  margin: 3px 0;
+  display: block;
+}
+
+/* Page content */
+.content {
+  /* padding: 10px; */
+}
+
+/*------ start of quotes section css ------*/
+
+/*------ start of quotes section css ------*/
+
+/*------ start of quotes section css ------*/
+
+/*------ start of quotes section css ------*/
+
+/*------ start of quotes section css ------*/
+
+
+
 /* entire quotes section */
 .quotes {
   display: flex;
@@ -142,10 +237,11 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 24px;
-  background-color: lightgray;
+  background-color: var(--colour2);
 }
 
 .quotesNavbar img {
+  background-color: white;
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
@@ -155,7 +251,7 @@ body {
 
 button {
   padding: 14px 24px;
-  background-color: grey;
+  background-color: var(--colour3);
   color: white;
   font-size: 30px;
   border: none;
@@ -178,20 +274,19 @@ button:hover {
 }
 
 /* quotes hero section */
-.quotesHero {
-  display: flex;
-  justify-content: center;
-  border: 2px solid red;
-  padding: 24px;
-  background-color: var(--colour1);
-  border-color: var(--colour2);
-  color: var(--colour3);
-}
-
 .heroContainer {
   display: flex;
   justify-content: center;
   padding: 48px 0;
+  background-color: var(--colour1);
+}
+
+/* quotes hero column */
+.quotesHero {
+  display: flex;
+  justify-content: center;
+  background-color: var(--colour1);
+  color: var(--colour3);
   width: 75%;
   margin: auto;
 }
@@ -233,7 +328,9 @@ button:hover {
   display: flex;
   justify-content: center;
   padding: 24px;
-  background-color: lightgray;
+  background-color: lightgrey;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .panelContainer {
@@ -251,12 +348,26 @@ button:hover {
   padding: 16px;
   width: 20%;
   margin: 0 auto;
-  box-shadow: 0 2px 8px 0 #83898a;
+  background-color: var(--colour2);
+  box-shadow: 0 2px 8px 0 var(--colour2);
   border-radius: 24px;
   -webkit-border-radius: 24px;
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
+}
+
+.quotesCard img {
+  width: 100%;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.quotesCard p {
+  color: var(--colour3);
 }
 
 /* navbar styling */
