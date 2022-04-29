@@ -166,11 +166,11 @@ button:hover {
 .quotesHero {
   display: flex;
   justify-content: center;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   padding: 24px;
   background-color: var(--colour1);
   border-color: var(--colour2);
-  text-decoration-color: var(--colour3);
+  color: var(--colour3);
 }
 
 .heroContainer {
