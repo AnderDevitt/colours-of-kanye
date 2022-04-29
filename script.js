@@ -59,6 +59,14 @@ async function getColor() {
     let schemeData = await responseScheme.json()
     let schemeArray = []
     schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
+    //Colour text changes go HERE
+    let colourBox = new Array(document.getElementsByClassName("colour-box").item(0), document.getElementsByClassName("colour-box").item(1), document.getElementsByClassName("colour-box").item(2))
+    for(let box of colourBox){
+        let boxP = box.querySelector("p")
+        console.log(boxP)
+        boxP.innerText = schemeArray[colourBox.indexOf(box)]
+
+    }
     changeColor(schemeArray)
     setTheme(schemeArray)
 }
@@ -116,7 +124,8 @@ const quotesButton = document.getElementsByClassName("quotesButton").item(0)
 
 quotesButton.addEventListener("click", (event) => {
     getColor();
-  });
-getKanye();
+});
+
 getColor();
+getKanye();
 randomImage();
