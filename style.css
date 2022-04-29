@@ -129,9 +129,9 @@ body {
   padding-right: 2rem;
 }
 
-/*------ start of quotes section css ------*/
+/*---------- start of quotes section css ----------*/
 
-/*------ webpage display window ------*/
+/*------ dummy webpage display window ------*/
 /* The browser window */
 .quotesContainer {
   border: 3px solid #f1f1f1;
@@ -213,34 +213,26 @@ input[type=text] {
   /* padding: 10px; */
 }
 
-/*------ start of quotes section css ------*/
+/*------ start of quotes content ------*/
 
-/*------ start of quotes section css ------*/
-
-/*------ start of quotes section css ------*/
-
-/*------ start of quotes section css ------*/
-
-/*------ start of quotes section css ------*/
-
-
-
-/* entire quotes section */
+/* dummy content */
 .quotes {
   display: flex;
   flex-direction: column;
 }
 
-/* quotes navbar */
+/* dummy navbar */
 .quotesNavbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 24px;
+  padding: 16px;
   background-color: var(--colour2);
 }
 
+/* dummy navbar image */
 .quotesNavbar img {
+  margin-left: 48px;
   background-color: white;
   border-radius: 24px;
   -webkit-border-radius: 24px;
@@ -250,7 +242,8 @@ input[type=text] {
 }
 
 button {
-  padding: 14px 24px;
+  padding: 12px 24px;
+  margin-right: 48px;
   background-color: var(--colour3);
   color: white;
   font-size: 30px;
@@ -264,7 +257,7 @@ button {
 }
 
 button:hover {
-  border: 2px solid grey;
+  border: 2px solid var(--colour3);
   background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
   -webkit-background-clip: text;
   background-clip: text;
@@ -295,6 +288,7 @@ button:hover {
 .quotesHeroImage {
   display: flex;
   width: 50%;
+  height: 100%;
   margin: auto;
   border-radius: 24px;
   -webkit-border-radius: 24px;
@@ -307,6 +301,7 @@ button:hover {
 .quotesHeroText {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   padding: 24px;
   width: 50%;
   margin: auto;
@@ -314,29 +309,61 @@ button:hover {
 
 .quotesHeroText h1 {
   font-size: 48px;
-  padding-left: 24px;
+  padding-left: 12px;
+}
+
+/* styling for hero quote */
+.quotesHeroText blockquote{
+  font-size: 30px;
+  background: #f9f9f910;
+  border-left: 10px solid lightgrey;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+.quotesHeroText blockquote:before {
+  content: open-quote;
+  display: inline;
+  height: 0;
+  line-height: 0;
+  left: -10px;
+  position: relative;
+  top: 30px;
+  color: #ccc;
+  font-size: 3em;
+}
+
+.quotesHeroText footer{
+  margin: 0;
+  text-align: right;
+  font-size: 1em;
+  font-style: italic;
 }
 
 .quotesHeroText p {
+  margin: 0;
   font-size: 24px;
-  padding-left: 24px;
+  /* padding-left: 24px; */
   font-style: italic;
+}
+
+.panelContainer {
+  display: flex;
+  padding: 48px 0;
+  background-color: lightgrey;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 /* quote cards section */
 .quotesPanel {
   display: flex;
   justify-content: center;
-  padding: 24px;
-  background-color: lightgrey;
-  border-bottom-right-radius: 8px;
-  border-bottom-left-radius: 8px;
-}
-
-.panelContainer {
-  display: flex;
-  width: 75%;
-  padding: 48px 0;
+  width: 90%;
+  margin: auto;
 }
 
 /* individual quote card */
@@ -346,9 +373,9 @@ button:hover {
   align-items: center;
   text-align: center;
   padding: 16px;
-  width: 20%;
+  width: 22%;
   margin: 0 auto;
-  background-color: var(--colour2);
+  background-color: var(--colour1);
   box-shadow: 0 2px 8px 0 var(--colour2);
   border-radius: 24px;
   -webkit-border-radius: 24px;
