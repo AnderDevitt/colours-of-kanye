@@ -35,6 +35,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  padding-bottom: 3rem;
 }
 
 .hero-image {
@@ -45,6 +46,10 @@ body {
 
 .site-description-text {
   text-align: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 
 /* Styling elements for the colour boxes in the top div */
@@ -86,7 +91,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 3rem;
   padding-bottom: 1rem;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
@@ -353,6 +358,13 @@ a {
     max-width: 35%;
     display: flex;
     padding: 1rem;
+  }
+
+  .site-description-text {
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    max-width: 50%;
   }
 }
 
