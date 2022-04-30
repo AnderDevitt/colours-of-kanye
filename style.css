@@ -683,7 +683,8 @@ section {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold ;
 }
 
 .button-contact-container {
