@@ -57,9 +57,9 @@ The project requirements were to code an app/web app using HTML, CSS, JavaScript
 
 ### Coding:
 
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
 
 ### API:
 
@@ -67,8 +67,17 @@ The project requirements were to code an app/web app using HTML, CSS, JavaScript
 - Random Colour API [http://api.creativehandles.com/getRandomColor](http://api.creativehandles.com/getRandomColor)
 - Colour Scheme API [https://www.thecolorapi.com/scheme?hex=${dataCol}&format=jsons&mode=triad&count=3](https://www.thecolorapi.com/scheme?hex=${dataCol}&format=jsons&mode=triad&count=3)
 
-### Source Control
+### Organisation and teamwork
 
+- Trello
 - Git and GitHub
 
 ## Things we learned from this project
+
+### Git and GitHub
+
+We have learnt a lot the last two days about using source control when working as a team. Using Trello to organise our work, we created tickets with randomized ticket-numbers for tasks, then our working branches with the numbers and descriptions for the tasks.
+
+We also got used to solving mistakes (like accidentally working in the main branch) and managing conflicts when making pull requests. It was also very interesting reviewing and discussing everyone's code before merging.
+
+###
