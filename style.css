@@ -282,12 +282,13 @@ button:hover {
   color: var(--colour3);
   width: 75%;
   margin: auto;
+  flex-direction: column;
 }
 
 /* quotes hero image */
 .quotesHeroImage {
   display: flex;
-  width: 50%;
+  max-width: 80%;
   height: 100%;
   margin: auto;
   border-radius: 24px;
@@ -305,6 +306,7 @@ button:hover {
   padding: 24px;
   width: 50%;
   margin: auto;
+  align-items: center;
 }
 
 .quotesHeroText h1 {
@@ -395,6 +397,10 @@ button:hover {
 
 .quotesCard p {
   color: var(--colour3);
+}
+
+.quotesHeroHeading {
+  text-align: center;
 }
 
 /* navbar styling */
@@ -489,6 +495,41 @@ a {
     display: flex;
     padding: 1rem;
   }
+  .quotesHero {
+    display: flex;
+    justify-content: center;
+    background-color: var(--colour1);
+    color: var(--colour3);
+    width: 75%;
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .quotesHeroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    width: 50%;
+    margin: auto;
+    align-content: space-between;
+  }
+  
+  .quotesHeroImage {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+  }
+
+  .quotesHeroHeading {
+    text-align: left;
+  }
 
 }
 
@@ -510,6 +551,20 @@ a {
     padding-left: 2rem;
     padding-right: 2rem;
     max-width: 50%;
+  }
+
+  .team-class-page {
+    margin: 3rem;
+  }
+  
+
+  .quotesHeroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    width: 50%;
+    margin: auto;
   }
 }
 
@@ -616,6 +671,12 @@ section {
   .footer-distributed .footer-left p.footer-links {
     line-height: 1.8;
   }
+  .team-class-page {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* rainbow animation */
@@ -709,6 +770,9 @@ section {
 
 .team-class-page {
   margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .colour-box-team {
