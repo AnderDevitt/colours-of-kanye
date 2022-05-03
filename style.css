@@ -304,7 +304,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   padding: 24px;
-  width: 50%;
+  width: 90%;
   margin: auto;
   align-items: center;
 }
@@ -358,6 +358,8 @@ button:hover {
   background-color: lightgrey;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* quote cards section */
@@ -366,6 +368,7 @@ button:hover {
   justify-content: center;
   width: 90%;
   margin: auto;
+  flex-wrap: wrap;
 }
 
 /* individual quote card */
@@ -375,7 +378,7 @@ button:hover {
   align-items: center;
   text-align: center;
   padding: 16px;
-  width: 22%;
+  max-width: 60%;
   margin: 0 auto;
   background-color: var(--colour1);
   box-shadow: 0 2px 8px 0 var(--colour2);
@@ -384,6 +387,7 @@ button:hover {
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
+  margin-bottom: 1rem;
 }
 
 .quotesCard img {
@@ -397,6 +401,10 @@ button:hover {
 
 .quotesCard p {
   color: var(--colour3);
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .quotesHeroHeading {
@@ -531,6 +539,35 @@ a {
     text-align: left;
   }
 
+  /* styling for hero quote */
+.quotesHeroText blockquote{
+  font-size: 30px;
+  background: #f9f9f910;
+  border-left: 10px solid lightgrey;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+.quotesCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  max-width: 22%;
+  margin: 0 auto;
+  background-color: var(--colour1);
+  box-shadow: 0 2px 8px 0 var(--colour2);
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
+
 }
 
 @media (min-width: 1025px) {
@@ -564,6 +601,13 @@ a {
     justify-content: center;
     padding: 24px;
     width: 50%;
+    margin: auto;
+  }
+
+  .quotesPanel {
+    display: flex;
+    justify-content: center;
+    width: 90%;
     margin: auto;
   }
 }
