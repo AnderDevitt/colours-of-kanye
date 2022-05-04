@@ -64,9 +64,6 @@ function hexCode (){
 
 
 async function getColor(data) {
-    // let response = await fetch('http://api.creativehandles.com/getRandomColor')
-    // let data = await response.json()
-    // let dataCol = data.color.substring(1)
     let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${data}&format=jsons&mode=triad&count=3`)
     let schemeData = await responseScheme.json()
     let schemeArray = []
@@ -100,7 +97,6 @@ function setTheme(schemeArray) {
 
 function randomImage() {
     let min = 1
-    //let max = 12
     let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13]
     let images = new Array(
         document.getElementsByClassName("quotesHeroImage").item(0),
@@ -129,12 +125,6 @@ btn.addEventListener("click", (event) => {
   hexCode();
   getKanye();
   randomImage();
-});
-
-const quotesButton = document.getElementsByClassName("quotesButton").item(0)
-
-quotesButton.addEventListener("click", (event) => {
-    getColor();
 });
 
 hexCode();
