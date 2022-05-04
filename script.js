@@ -51,11 +51,23 @@ let naughtyYeezus = (word) => {
 
 // Random color generator api
 
-async function getColor() {
-    let response = await fetch('http://api.creativehandles.com/getRandomColor')
-    let data = await response.json()
-    let dataCol = data.color.substring(1)
-    let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${dataCol}&format=jsons&mode=triad&count=3`)
+function hexCode (){
+    let digits = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
+    let hex = []
+    for(let i=0; i<6; i++){
+        let random = Math.floor(Math.random()*(digits.length - 1)+1)
+        hex.push(digits[random])
+    }
+    let data = hex.join('')
+    getColor(data)
+}
+
+
+async function getColor(data) {
+    // let response = await fetch('http://api.creativehandles.com/getRandomColor')
+    // let data = await response.json()
+    // let dataCol = data.color.substring(1)
+    let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${data}&format=jsons&mode=triad&count=3`)
     let schemeData = await responseScheme.json()
     let schemeArray = []
     schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
@@ -63,7 +75,6 @@ async function getColor() {
     let colourBox = new Array(document.getElementsByClassName("colour-box").item(0), document.getElementsByClassName("colour-box").item(1), document.getElementsByClassName("colour-box").item(2))
     for(let box of colourBox){
         let boxP = box.querySelector("p")
-        console.log(boxP)
         boxP.innerText = schemeArray[colourBox.indexOf(box)]
 
     }
@@ -115,7 +126,7 @@ function randomImage() {
 const btn = document.getElementById("big-button");
 
 btn.addEventListener("click", (event) => {
-  getColor();
+  hexCode();
   getKanye();
   randomImage();
 });
@@ -126,6 +137,6 @@ quotesButton.addEventListener("click", (event) => {
     getColor();
 });
 
-getColor();
+hexCode();
 getKanye();
 randomImage();
