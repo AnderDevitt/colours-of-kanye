@@ -282,12 +282,13 @@ button:hover {
   color: var(--colour3);
   width: 75%;
   margin: auto;
+  flex-direction: column;
 }
 
 /* quotes hero image */
 .quotesHeroImage {
   display: flex;
-  width: 50%;
+  max-width: 80%;
   height: 100%;
   margin: auto;
   border-radius: 24px;
@@ -303,8 +304,9 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   padding: 24px;
-  width: 50%;
+  width: 90%;
   margin: auto;
+  align-items: center;
 }
 
 .quotesHeroText h1 {
@@ -356,6 +358,8 @@ button:hover {
   background-color: lightgrey;
   border-bottom-right-radius: 8px;
   border-bottom-left-radius: 8px;
+  flex-direction: row;
+  justify-content: center;
 }
 
 /* quote cards section */
@@ -364,6 +368,7 @@ button:hover {
   justify-content: center;
   width: 90%;
   margin: auto;
+  flex-wrap: wrap;
 }
 
 /* individual quote card */
@@ -373,7 +378,7 @@ button:hover {
   align-items: center;
   text-align: center;
   padding: 16px;
-  width: 22%;
+  max-width: 60%;
   margin: 0 auto;
   background-color: var(--colour1);
   box-shadow: 0 2px 8px 0 var(--colour2);
@@ -382,6 +387,7 @@ button:hover {
   -moz-border-radius: 24px;
   -ms-border-radius: 24px;
   -o-border-radius: 24px;
+  margin-bottom: 1rem;
 }
 
 .quotesCard img {
@@ -395,6 +401,14 @@ button:hover {
 
 .quotesCard p {
   color: var(--colour3);
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.quotesHeroHeading {
+  text-align: center;
 }
 
 /* navbar styling */
@@ -489,6 +503,70 @@ a {
     display: flex;
     padding: 1rem;
   }
+  .quotesHero {
+    display: flex;
+    justify-content: center;
+    background-color: var(--colour1);
+    color: var(--colour3);
+    width: 75%;
+    margin: auto;
+    flex-direction: row;
+  }
+
+  .quotesHeroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    width: 50%;
+    margin: auto;
+    align-content: space-between;
+  }
+  
+  .quotesHeroImage {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    border-radius: 24px;
+    -webkit-border-radius: 24px;
+    -moz-border-radius: 24px;
+    -ms-border-radius: 24px;
+    -o-border-radius: 24px;
+  }
+
+  .quotesHeroHeading {
+    text-align: left;
+  }
+
+  /* styling for hero quote */
+.quotesHeroText blockquote{
+  font-size: 30px;
+  background: #f9f9f910;
+  border-left: 10px solid lightgrey;
+  margin: .5em 10px;
+  padding: 0 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+  padding: 10px 20px;
+  line-height: 1.4;
+}
+
+.quotesCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px;
+  max-width: 22%;
+  margin: 0 auto;
+  background-color: var(--colour1);
+  box-shadow: 0 2px 8px 0 var(--colour2);
+  border-radius: 24px;
+  -webkit-border-radius: 24px;
+  -moz-border-radius: 24px;
+  -ms-border-radius: 24px;
+  -o-border-radius: 24px;
+}
 
 }
 
@@ -510,6 +588,27 @@ a {
     padding-left: 2rem;
     padding-right: 2rem;
     max-width: 50%;
+  }
+
+  .team-class-page {
+    margin: 3rem;
+  }
+  
+
+  .quotesHeroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 24px;
+    width: 50%;
+    margin: auto;
+  }
+
+  .quotesPanel {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    margin: auto;
   }
 }
 
@@ -616,6 +715,12 @@ section {
   .footer-distributed .footer-left p.footer-links {
     line-height: 1.8;
   }
+  .team-class-page {
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 /* rainbow animation */
@@ -709,6 +814,9 @@ section {
 
 .team-class-page {
   margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .colour-box-team {
