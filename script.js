@@ -67,6 +67,9 @@ async function getColor(data) {
     let schemeArray = []
     try{
         let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${data}&format=jsons&mode=triad&count=3`)
+        if(!responseScheme.ok){
+            throw new Error('Bad HTTP request')
+        }
         let schemeData = await responseScheme.json()
         schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
         //Colour text changes go HERE
