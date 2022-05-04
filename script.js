@@ -64,19 +64,24 @@ function hexCode (){
 
 
 async function getColor(data) {
-    let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${data}&format=jsons&mode=triad&count=3`)
-    let schemeData = await responseScheme.json()
     let schemeArray = []
-    schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
-    //Colour text changes go HERE
-    let colourBox = new Array(document.getElementsByClassName("colour-box").item(0), document.getElementsByClassName("colour-box").item(1), document.getElementsByClassName("colour-box").item(2))
-    for(let box of colourBox){
-        let boxP = box.querySelector("p")
-        boxP.innerText = schemeArray[colourBox.indexOf(box)]
-
+    try{
+        let responseScheme = await fetch(`https://www.thecolorapi.com/scheme?hex=${data}&format=jsons&mode=triad&count=3`)
+        let schemeData = await responseScheme.json()
+        schemeArray.push(schemeData.colors[0].hex.value,schemeData.colors[1].hex.value, schemeData.colors[2].hex.value)
+        //Colour text changes go HERE
+    }catch(err){
+        alert('Failed to load colors. Click OK to load default colors...')
+        schemeArray = ['#A0D12F', '#F48C91', '#B871DB']
+    }finally{
+        let colourBox = new Array(document.getElementsByClassName("colour-box").item(0), document.getElementsByClassName("colour-box").item(1), document.getElementsByClassName("colour-box").item(2))
+        for(let box of colourBox){
+            let boxP = box.querySelector("p")
+            boxP.innerText = schemeArray[colourBox.indexOf(box)]
+        }
+        changeColor(schemeArray)
+        setTheme(schemeArray)
     }
-    changeColor(schemeArray)
-    setTheme(schemeArray)
 }
 
 function changeColor(schemeArray) {
