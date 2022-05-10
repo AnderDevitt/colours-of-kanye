@@ -17,7 +17,7 @@ Team Pokemasters
 - **Matilda Morton** [https://github.com/matildamort](https://github.com/matildamort)
 - **Simon Tanna** [https://github.com/simon-tanna](https://github.com/simon-tanna)
 - **Jason Sandeman** [https://github.com/jwsandeman](https://github.com/jwsandeman)
-- **Cameron Jones** [https://github.com/jwsandeman](https://github.com/jwsandeman)
+- **Cameron Jones** [https://github.com/jwsandeman](https://github.com/iamcrjones)
 - **Andrew Devitt** [https://github.com/AnderDevitt](https://github.com/AnderDevitt)
 
 ## Purpose of the application
